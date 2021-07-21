@@ -123,11 +123,11 @@ while M<N
         %plot patient growth
         figure(fig1)
         hold on 
-        plot(data.time,controlmodel_S,':','Color',[0.5 0.5 0.5])
+        plot(data.time,controlmodel_S,':','Color',[0.5 0.5 0.5],'LineWidth',1)
         
         figure(fig2)
         hold on
-        plot(data.time,fullmodel_S,':','Color',[0.5 0.5 0.5])
+        plot(data.time,fullmodel_S,':','Color',[0.5 0.5 0.5],'LineWidth',1)
     end
         
         fprintf('Patient #%d\n', M);
@@ -136,7 +136,7 @@ end
 % label x and y axis of fig1 and fig 2 and plot data over the top
 figure(fig1)
 hold on 
-l1 = plot(data.time,controlmodel_S,':','Color',[0.5 0.5 0.5]);
+l1 = plot(data.time,controlmodel_S,':','Color',[0.5 0.5 0.5],'LineWidth',1);
 l2 = errorbar(data.time,data.control,data.std_control,'Color',[0, 0.45, 0.75],'LineWidth',2);
 xlabel('Time (days)')
 ylabel('Tumour volume (mm^3)')
@@ -146,7 +146,7 @@ legend([l1 l2],'Inidividual Patient','Data')
 
 figure(fig2)
 hold on
-l1 = plot(data.time,fullmodel_S,':','Color',[0.5 0.5 0.5]);
+l1 = plot(data.time,fullmodel_S,':','Color',[0.5 0.5 0.5],'LineWidth',1);
 l2 = errorbar(data.time,data.treatment,data.std_treatment,'Color',[0.51, 0.78, 0.95],'LineWidth',2);
 xlabel('Time (days)')
 ylabel('Tumour volume (mm^3)')
