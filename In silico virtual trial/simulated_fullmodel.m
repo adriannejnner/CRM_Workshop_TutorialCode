@@ -8,6 +8,7 @@ function dydt = fullmodel(t,y,Z)
    S = y(1);
    T = y(2);
    
+   %Model for tumour immune interactions
    dS = r*S*(1-S/K)-kappa*S*T;
    dT = a*S-d*T;
 

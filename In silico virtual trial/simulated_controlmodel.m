@@ -7,7 +7,7 @@ controlmodel_S = deval(sol,data.time,1);
 function dydt = controlmodel(t,y,Z)
    S = y(1);
 
-   dS = r*S*(1-S/K);
+   dS = r*S*(1-S/K); %simple logistic growth model for tumour growth (no immune)
 
    dydt = [dS];
 
